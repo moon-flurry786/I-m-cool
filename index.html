@@ -7,68 +7,102 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#050507;color:#fff;font-family:'Poppins',sans-serif;overflow-x:hidden;min-height:100vh}
+html{scroll-behavior:smooth}
+body{background:#050507;color:#fff;font-family:'Poppins',sans-serif;overflow-x:hidden}
 .bg{position:fixed;inset:0;background:radial-gradient(600px at 50% 0%, #4a0a0a 0%, #050507 60%), radial-gradient(800px at 90% 90%, #1a0000 0%, transparent 70%);z-index:-2}
-.mist{position:fixed;inset:0;background:linear-gradient(transparent, rgba(255,0,0,0.03) 50%, transparent);animation:m 4s infinite;z-index:-1}
-@keyframes m{0%,100%{transform:translateY(-100%)}50%{transform:translateY(100%)}}
-nav{display:flex;justify-content:space-between;padding:20px 6%;align-items:center}
-.logo{font-family:'Cinzel',serif;letter-spacing:4px;font-size:1.2rem;color:#ff1a1a;text-shadow:0 0 10px #ff0000}
-.nav-links{color:#666;font-size:0.8rem;letter-spacing:2px}
-.hero{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;padding:18px 6%;align-items:center;background:rgba(5,5,7,0.8);backdrop-filter:blur(10px);z-index:10;border-bottom:1px solid #ffffff0f}
+.logo{font-family:'Cinzel',serif;letter-spacing:4px;font-size:1.1rem;color:#ff1a1a;text-shadow:0 0 10px #ff0000}
+.nav-links a{color:#666;font-size:0.7rem;letter-spacing:2px;text-decoration:none;margin-left:20px;transition:0.3s}
+.nav-links a:hover{color:#ff1a1a}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 20px 60px}
 .badge{border:1px solid #ff1a1a33;background:#ff00000d;padding:6px 14px;border-radius:20px;font-size:0.7rem;letter-spacing:3px;color:#ff4d4d;margin-bottom:25px;animation:glow 2s infinite}
 @keyframes glow{0%,100%{box-shadow:0 0 5px #ff000033}50%{box-shadow:0 0 20px #ff000066}}
 h1{font-family:'Cinzel',serif;font-size:clamp(3rem,12vw,6rem);line-height:0.9;letter-spacing:-2px}
-h1 span{display:block}
-.white{color:#fff}
-.red{color:#ff0a0a;text-shadow:0 0 30px #ff0000, 0 0 60px #ff000044}
-.drip{position:relative}
-.drip::after{content:'🩸';position:absolute;right:-10px;top:10px;font-size:1.5rem;animation:d 2s infinite}
-@keyframes d{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+.white{color:#fff} .red{color:#ff0a0a;text-shadow:0 0 30px #ff0000, 0 0 60px #ff000044}
 .sub{color:#888;max-width:500px;margin:25px auto;line-height:1.6;font-size:0.95rem}
-.btns{display:flex;gap:15px;margin-top:15px;flex-wrap:wrap;justify-content:center}
-.btn{padding:14px 32px;border-radius:30px;border:none;cursor:pointer;letter-spacing:2px;font-size:0.75rem;font-weight:700;transition:0.3s}
+.btn{padding:14px 32px;border-radius:30px;border:none;cursor:pointer;letter-spacing:2px;font-size:0.75rem;font-weight:700;transition:0.3s;text-decoration:none;display:inline-block}
 .btn-red{background:#ff0a0a;color:#fff;box-shadow:0 0 20px #ff000066}
 .btn-red:hover{transform:translateY(-2px);box-shadow:0 0 40px #ff0000aa}
-.btn-ghost{background:transparent;border:1px solid #333;color:#888}
-.btn-ghost:hover{border-color:#ff0a0a;color:#fff}
-.stats{display:flex;gap:40px;margin-top:60px;flex-wrap:wrap;justify-content:center;opacity:0.7}
-.stat{text-align:center}
-.stat b{font-family:'Cinzel',serif;font-size:1.8rem;display:block;color:#fff}
-.stat i{font-style:normal;font-size:0.65rem;letter-spacing:2px;color:#666}
-.bats{position:fixed;inset:0;pointer-events:none;overflow:hidden}
-.bat{position:absolute;animation:fly linear infinite}
-@keyframes fly{0%{transform:translateX(-100px) translateY(0)}100%{transform:translateX(110vw) translateY(-200px)}}
+section{padding:80px 6%;border-top:1px solid #ffffff0a;max-width:1100px;margin:auto}
+h2{font-family:'Cinzel',serif;font-size:2.2rem;margin-bottom:15px;letter-spacing:2px}
+h2 span{color:#ff0a0a}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:30px}
+.card{background:linear-gradient(180deg,#ffffff08,#ffffff02);border:1px solid #ffffff10;padding:25px;border-radius:20px;transition:0.3s}
+.card:hover{border-color:#ff0a0a55;transform:translateY(-5px)}
+.card h3{font-family:'Cinzel',serif;font-size:1rem;margin-bottom:10px;color:#ff4d4d}
+.card p{color:#888;font-size:0.85rem;line-height:1.6}
+.music-btn{position:fixed;bottom:20px;right:20px;background:#111;border:1px solid #333;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;font-size:1.2rem;transition:0.3s}
+.music-btn:hover{border-color:#ff0a0a}
+footer{text-align:center;padding:40px;color:#444;font-size:0.7rem;letter-spacing:2px;border-top:1px solid #ffffff0a}
 </style>
 </head>
 <body>
 <div class="bg"></div>
-<div class="mist"></div>
-<div class="bats">
-<span class="bat" style="top:15%;animation-duration:8s">🦇</span>
-<span class="bat" style="top:35%;animation-duration:11s;animation-delay:1s">🦇</span>
-<span class="bat" style="top:65%;animation-duration:9s;animation-delay:2s">🦇</span>
-</div>
 <nav>
 <div class="logo">I'M COOL</div>
-<div class="nav-links">VAMPIRE / NOCTURNAL / 2026</div>
+<div class="nav-links">
+<a href="#about">ABOUT</a>
+<a href="#vibe">VIBE</a>
+<a href="#contact">CONTACT</a>
+</div>
 </nav>
+
+<div class="music-btn" id="musicBtn" onclick="toggleMusic()">🔇</div>
+<audio id="horrorAudio" loop preload="auto">
+<source src="https://cdn.pixabay.com/download/audio/2022/10/30/audio_fbd8a6d5db.mp3?filename=halloween-horror-ambient-126452.mp3" type="audio/mpeg">
+</audio>
+
 <div class="hero">
 <div class="badge">● AWAKENED AFTER MIDNIGHT</div>
-<h1>
-<span class="white">I'M NOT</span>
-<span class="red drip">COOL</span>
-<span class="white">I'M COLD.</span>
-</h1>
-<p class="sub">Dark mode is not a theme. It's a lifestyle. Born in shadows, built for the night. Vampire energy, no sunlight required.</p>
-<div class="btns">
-<button class="btn btn-red" onclick="location.href='https://github.com/moon-flurry786'">ENTER THE NIGHT</button>
-<button class="btn btn-ghost">DON'T CLICK AFTER 3AM</button>
+<h1><span class="white">I'M NOT</span><span class="red">COOL</span><span class="white">I'M COLD.</span></h1>
+<p class="sub">Dark mode is not a theme. It's a lifestyle. Born in shadows, built for the night.</p>
+<a href="#about" class="btn btn-red">EXPLORE MORE ↓</a>
 </div>
-<div class="stats">
-<div class="stat"><b>99%</b><i>DARKNESS</i></div>
-<div class="stat"><b>0%</b><i>SUNLIGHT</i></div>
-<div class="stat"><b>∞</b><i>COOLNESS</i></div>
+
+<section id="about">
+<h2>ABOUT <span>ME</span></h2>
+<p style="color:#888;max-width:600px;line-height:1.7">I don't follow trends. I create cold ones. This is not just a website, it's my nocturnal identity. 99% darkness, 0% sunlight, infinite coolness. If you get it, you get it.</p>
+<div class="grid">
+<div class="card"><h3>🌙 Nocturnal</h3><p>Active after 12AM. Best ideas come in darkness. Sunlight is overrated.</p></div>
+<div class="card"><h3>🦇 Vampire Energy</h3><p>No drama. Just aura. Silent, cold, and unforgettable. Energy speaks louder.</p></div>
+<div class="card"><h3>🩸 Rare</h3><p>Not for everyone. Only for those who understand the dark aesthetic.</p></div>
 </div>
+</section>
+
+<section id="vibe">
+<h2>THE <span>VIBE</span></h2>
+<div class="grid">
+<div class="card"><h3>01. Dark Aesthetic</h3><p>Black on black, red glow, mist, bats. Pure vampire luxury.</p></div>
+<div class="card"><h3>02. Cold Attitude</h3><p>I'm not rude, I'm just cold. There's a difference.</p></div>
+<div class="card"><h3>03. Midnight Thoughts</h3><p>Deep talks, lo-fi horror beats, and endless scrolling at 3AM.</p></div>
 </div>
+</section>
+
+<section id="contact">
+<h2>CONTACT <span>ME</span></h2>
+<p style="color:#888;margin-bottom:25px">Wanna enter the night? Don't DM after 3AM... you might get possessed.</p>
+<a href="https://github.com/moon-flurry786" class="btn btn-red">GITHUB →</a>
+<a href="#" class="btn" style="border:1px solid #333;color:#888;margin-left:10px">INSTAGRAM</a>
+</section>
+
+<footer>I'M COOL © 2026 — BUILT IN DARKNESS</footer>
+
+<script>
+let isPlaying=false;
+function toggleMusic(){
+const audio=document.getElementById('horrorAudio');
+const btn=document.getElementById('musicBtn');
+if(!isPlaying){
+audio.volume=0.3;
+audio.play();
+btn.innerHTML='🎵';
+isPlaying=true;
+}else{
+audio.pause();
+btn.innerHTML='🔇';
+isPlaying=false;
+}
+}
+</script>
 </body>
 </html>
