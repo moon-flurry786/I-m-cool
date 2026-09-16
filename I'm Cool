@@ -1,0 +1,74 @@
+index.html<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'M COOL - Vampire Edition</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050507;color:#fff;font-family:'Poppins',sans-serif;overflow-x:hidden;min-height:100vh}
+.bg{position:fixed;inset:0;background:radial-gradient(600px at 50% 0%, #4a0a0a 0%, #050507 60%), radial-gradient(800px at 90% 90%, #1a0000 0%, transparent 70%);z-index:-2}
+.mist{position:fixed;inset:0;background:linear-gradient(transparent, rgba(255,0,0,0.03) 50%, transparent);animation:m 4s infinite;z-index:-1}
+@keyframes m{0%,100%{transform:translateY(-100%)}50%{transform:translateY(100%)}}
+nav{display:flex;justify-content:space-between;padding:20px 6%;align-items:center}
+.logo{font-family:'Cinzel',serif;letter-spacing:4px;font-size:1.2rem;color:#ff1a1a;text-shadow:0 0 10px #ff0000}
+.nav-links{color:#666;font-size:0.8rem;letter-spacing:2px}
+.hero{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}
+.badge{border:1px solid #ff1a1a33;background:#ff00000d;padding:6px 14px;border-radius:20px;font-size:0.7rem;letter-spacing:3px;color:#ff4d4d;margin-bottom:25px;animation:glow 2s infinite}
+@keyframes glow{0%,100%{box-shadow:0 0 5px #ff000033}50%{box-shadow:0 0 20px #ff000066}}
+h1{font-family:'Cinzel',serif;font-size:clamp(3rem,12vw,6rem);line-height:0.9;letter-spacing:-2px}
+h1 span{display:block}
+.white{color:#fff}
+.red{color:#ff0a0a;text-shadow:0 0 30px #ff0000, 0 0 60px #ff000044}
+.drip{position:relative}
+.drip::after{content:'🩸';position:absolute;right:-10px;top:10px;font-size:1.5rem;animation:d 2s infinite}
+@keyframes d{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+.sub{color:#888;max-width:500px;margin:25px auto;line-height:1.6;font-size:0.95rem}
+.btns{display:flex;gap:15px;margin-top:15px;flex-wrap:wrap;justify-content:center}
+.btn{padding:14px 32px;border-radius:30px;border:none;cursor:pointer;letter-spacing:2px;font-size:0.75rem;font-weight:700;transition:0.3s}
+.btn-red{background:#ff0a0a;color:#fff;box-shadow:0 0 20px #ff000066}
+.btn-red:hover{transform:translateY(-2px);box-shadow:0 0 40px #ff0000aa}
+.btn-ghost{background:transparent;border:1px solid #333;color:#888}
+.btn-ghost:hover{border-color:#ff0a0a;color:#fff}
+.stats{display:flex;gap:40px;margin-top:60px;flex-wrap:wrap;justify-content:center;opacity:0.7}
+.stat{text-align:center}
+.stat b{font-family:'Cinzel',serif;font-size:1.8rem;display:block;color:#fff}
+.stat i{font-style:normal;font-size:0.65rem;letter-spacing:2px;color:#666}
+.bats{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.bat{position:absolute;animation:fly linear infinite}
+@keyframes fly{0%{transform:translateX(-100px) translateY(0)}100%{transform:translateX(110vw) translateY(-200px)}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="mist"></div>
+<div class="bats">
+<span class="bat" style="top:15%;animation-duration:8s">🦇</span>
+<span class="bat" style="top:35%;animation-duration:11s;animation-delay:1s">🦇</span>
+<span class="bat" style="top:65%;animation-duration:9s;animation-delay:2s">🦇</span>
+</div>
+<nav>
+<div class="logo">I'M COOL</div>
+<div class="nav-links">VAMPIRE / NOCTURNAL / 2026</div>
+</nav>
+<div class="hero">
+<div class="badge">● AWAKENED AFTER MIDNIGHT</div>
+<h1>
+<span class="white">I'M NOT</span>
+<span class="red drip">COOL</span>
+<span class="white">I'M COLD.</span>
+</h1>
+<p class="sub">Dark mode is not a theme. It's a lifestyle. Born in shadows, built for the night. Vampire energy, no sunlight required.</p>
+<div class="btns">
+<button class="btn btn-red" onclick="location.href='https://github.com/moon-flurry786'">ENTER THE NIGHT</button>
+<button class="btn btn-ghost">DON'T CLICK AFTER 3AM</button>
+</div>
+<div class="stats">
+<div class="stat"><b>99%</b><i>DARKNESS</i></div>
+<div class="stat"><b>0%</b><i>SUNLIGHT</i></div>
+<div class="stat"><b>∞</b><i>COOLNESS</i></div>
+</div>
+</div>
+</body>
+</html>
